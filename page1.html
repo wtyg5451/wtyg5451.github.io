@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <link rel="stylesheet" href="style/style01.css">  -->
-	<title>Document</title>
+	<title>想认识我吗?</title>
 	<style>
 		* {
 			margin: 0;
@@ -51,8 +51,12 @@
 			position: absolute;
 			left: 0;
 			right: 0;
-			top: 80px;
+			top: 100px;
 			margin: auto;
+			transition: all 1s;
+		}
+		.logo:hover {
+			transform: scale(1.1)  rotate(720deg);
 		}
 		.text1 {
 			width: 370px;
@@ -66,7 +70,7 @@
 			left: 0;
 			right: 0;
 			margin: auto;
-			margin-top: 510px;
+			margin-top: 540px;
 			background-color: rgba(255, 255, 255, 0.6);
 			border-radius: 30px;
 		}
@@ -82,10 +86,63 @@
 		.color4 {
 			color: #239443;
 		}
+		.title {
+			width: 100%;
+			height: 50px;
+			position: fixed;
+			background-color: rgba(144, 144, 144, 0.6);
+			z-index: 1;
+			display: flex;
+			justify-content: space-between;
+			padding-left: 40px;
+			padding-right: 40px;
+			padding-top: 10px;
+		}
+		.title>a>p {
+			width: 100px;
+			height: 30px;
+			float: left;
+			background-color: rgba(144, 144, 144, 1);
+			display: block;
+			border-radius: 8px;
+			text-align: center;
+			line-height: 30px;
+			transition: all 0.5s;
+		}
+		.title>a>p:hover {
+			transform: scale(1.1);
+			background-color: azure;
+			border: black 1px solid;
+			font-size: 18px;
+		}
+		a:link {
+			color: azure;
+			/* 未访问 */
+		} 
+		a:visited {
+			color: azure;
+			/* 已访问 */
+		}
+		a:hover {
+			color: #333;
+			/* 鼠标悬停 */
+		}
+		a:active {
+			color: #333;
+			/* 点击中 */
+		}
 	</style>
 </head>
 <body>
+	<div class="title">
+		<a href="page0.html"><p>返回</p></a>
+		<a href="index.html"><p>主页</p></a>
+		<a href="pageerror.html"><p>开发中</p></a>
+		<a href="pageerror.html"><p>开发中</p></a>
+		<a href="pageerror.html"><p>开发中</p></a>
+	</div>
 	<div class="image_1">
+	
 		<img src="images/wtyglogo.jpg" alt="" class="logo">
 		<div class="text1">
 			<p>WtyG
