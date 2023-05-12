@@ -7,43 +7,71 @@
   <title>里世界</title>
   <style>
     * {
-      margin:0;
-      padding:0;
+        margin:0;
+        padding:0;
     }
     body {
-      background-color: #444;
-      color: #ddd;
+        background-image: url(cat.gif);
+        background-repeat: no-repeat;
+        background-position-y: 30px;
+        background-position-x: center;
+        background-color: #444;
+        color: #ddd;
     }
-    .play {
-     width: 180px;
-     height: 40px;
-     text-align: center;
-     line-height: 40px;
-     display: block;
-     background-color: #999;
-     margin-left: 35px;
+    ul {
+        width: 780px;
+        margin: 0 auto;
+    }
+    li {
+        width: 180px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        display: block;
+        background-color: #999;
+        margin-left: 15px;
+        margin-bottom: 10px;
+        float: left;
     }
     .cat {
-      width: 606px;
-      height: 407px;
-      margin: 0 auto;
+        width: 606px;
+        height: 407px;
+        margin: 0 auto;
     }
-    
+    .text {
+        width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
   </style>
 </head>
 
 <body>
-  <h1>你好像发现了什么！</h1>
-<a href="game/index.html">
-<p class="play">
-    点击这里开始玩游戏
-</p>
-</a>
-<a href="index.html">
-<div class="cat">
-  <img src="cat.gif" alt="cat.gif">
-</div>
-</a>
+    <div class="text">这是一只“臭猫”,它可以帮你......</div>
+    <div class="cat"></div>
+    <ul>
+        <li>
+            <a href="page1.html">
+                <p>认识WtyG7584</p>
+            </a>
+        </li>
+        <li>
+            <a href="game/index.html">
+                <p class="play">开始玩游戏</p>
+            </a>
+        </li>
+        <li>
+            <a href="index.html">
+                <p>返回到Welcome Page</p>
+            </a>
+        </li>
+        <li>
+            <a href="pageerror.html">
+                <p>更多功能开发中...</p>
+            </a>
+        </li>
+
+    </ul>
 </body>
 
 </html>
