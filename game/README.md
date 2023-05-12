@@ -1,12 +1,6 @@
-# wtyg5451.github.io
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<smeta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
-  <h1>this is a test</h1>
-</body>
+## Snake (the game itself)
+
+Snake is a game in which a snake needs to explore an environment and catch the fruit without hitting any obstacle or itself. Every time the snake catches a fruit, its size increases.
+
+- [Coding "Snake" in 4 min 30 sec](https://www.youtube.com/watch?v=xGmXxpIj6vs)
+- [Mastering the Module Pattern](https://toddmotto.com/mastering-the-module-pattern/) (not really about Snake itself, but a pattern I tried to follow on the project)
