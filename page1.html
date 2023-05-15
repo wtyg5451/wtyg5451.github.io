@@ -96,7 +96,7 @@
 			background-color: rgba(144, 144, 144, 0.6);
 			z-index: 1;
 			display: flex;
-			justify-content: space-between;
+			justify-content: space-evenly;
 			padding-left: 40px;
 			padding-right: 40px;
 			padding-top: 10px;
@@ -108,7 +108,7 @@
 			display: block;
 			border-radius: 8px;
 			text-align: center;
-			line-height: 30px;
+			line-height: 37px;
 			transition: all 0.2s;
 		}
 		.title>a>p:hover {
@@ -116,6 +116,9 @@
 			background-color: azure;
 			border: black 1px solid;
 			font-size: 18px;
+		}
+		a {
+		    text-decoration: none;
 		}
 		a:link {
 			color: azure;
@@ -133,6 +136,10 @@
 			color: #333;
 			/* 点击中 */
 		}
+		/*@media screen and (max-width: 1000px)
+{
+    body { width:1360px !important;  }
+}*/
 	</style>
 </head>
 <body>

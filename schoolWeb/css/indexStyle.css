@@ -1,0 +1,20 @@
+/*this css for index*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background: linear-gradient(#999,#222);
+    background-attachment: fixed;
+}
+img {
+    float: left;
+}
+.title {
+    width: 100vw;
+    height: auto;
+    background-color: rgba(144, 144, 144, 0.8);
+    position: fixed;
+}
