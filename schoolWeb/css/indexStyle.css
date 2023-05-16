@@ -6,8 +6,11 @@
 }
 body {
     height: 100vh;
-    background: linear-gradient(#999,#222);
+    width: 100%;
+    background-image: url(../images/A004.png);
+    background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
 }
 img {
     float: left;
