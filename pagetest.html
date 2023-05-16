@@ -28,6 +28,7 @@
             max-width: 100%;
             height: 680px;
             width: 100vw;
+            position: relative;
         }
 
         .image_2 {
@@ -62,12 +63,48 @@
             }
 
         } 
+        .button {
+            width: 50px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        .button::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: purple;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: skewX(45deg);
+        }
+        .button::before {
+            width: 0%;
+            transition: all 1s;
+            z-index: -1;
+        }
+        .button:hover::before {
+            width: 100%;
+        }
+        .button:hover {
+            color: white;
+        }
     </style>
 
 </head>
 
 <body>
-    <div class="image_1"></div>
+    <div class="image_1">
+        <button class="button">
+            .start
+        </button>
+    </div>
     <div class="image_2"></div>
     <div class="image_3"></div>
     <div class="image_4"></div>
