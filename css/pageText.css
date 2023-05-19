@@ -1,0 +1,7 @@
+/*this css is for pageText*/
+.logo {
+    position: sticky;
+    z-index: 100;
+    top: 5rem;
+    mix-blend-mode: difference;
+}
