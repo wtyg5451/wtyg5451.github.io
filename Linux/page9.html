@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>布署three-gltf-viewer</title>
+	<link rel="stylesheet" href="style/css1.css">
+</head>
+<body>
+	<div class="box">
+		<p>
+			1.	将node-v18.15.0-linux-x64.tar.xz文件和three-gltf-viewer文件夹，通过远程连接工具, 放入Downloads文件夹<br>
+2.	复制到root根目录<br>
+3.	修改node-v18.15.0-linux-x64.tar.xz文件权限<br>
+4.	两次解压并更名<br>
+xz -d node-v18.15.0-linux-x64.tar.xz<br>
+tar xvf node-v18.15.0-linux-x64.tar -C /opt/<br>
+mv node-v18.15.0-linux-x64  nodejs<br>
+5.设置软链接<br>
+ln -s nodejs/bin/npm  /usr/local/bin<br>
+ln -s nodejs/bin/node  /usr/local/bin<br>
+ln -s nodejs/bin/npx  /usr/local/bin<br>
+6.查看版本号<br>
+node --version<br>
+npm --version<br>
+7. 进入three-gltf-viewer文件夹，调试运行项目<br>
+npm install<br>
+npm run dev<br>
+8.在linux自带的浏览器中查看<br>
+http://localhost:3000<br>
+<br>
+		</p>
+	</div>
+</body>
+</html>

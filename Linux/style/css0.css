@@ -1,0 +1,18 @@
+a:link {
+    color: rgb(0, 0, 0);
+    /* 未访问 */
+} 
+a:visited {
+    color: rgb(0, 0, 0);
+    /* 已访问 */
+}
+a:hover {
+    color: rgb(77, 77, 77);
+	/* text-shadow: 1px 1px 0px rgba(255, 255, 255, 1) */
+    /* 鼠标悬停 */
+}
+a:active {
+    color: #333;
+    transform: scale(0.90);
+    /* 点击中 */
+}

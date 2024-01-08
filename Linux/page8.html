@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>控制台console</title>
+	<link rel="stylesheet" href="style/css1.css">
+</head>
+<body>
+	<div class="box">
+		<p>
+			1.	将下载的 console.tar.gz通过远程连接工具, 放入fisco目录, 然后解压到当前文件夹<br>
+tar  -zxvf  console.tar.gz <br>
+2.	检查java环境是否正常<br>
+java  -version<br>
+3.	把nodes文件夹里的sdk文件复制到控制台相应的文件夹中<br>
+cp nodes/127.0.0.1/sdk/*  console/conf/<br>
+4.	复制控制台文件夹的配置文件<br>
+cp console/conf/config-example.toml config.toml<br>
+5.启动控制台<br>
+bash console/start.sh<br>
+<br>
+		</p>
+	</div>
+</body>
+</html>

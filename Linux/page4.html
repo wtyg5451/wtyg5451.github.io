@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Linux基本操作指令</title>
+	<link rel="stylesheet" href="style/css1.css">
+</head>
+<body>
+	<div class="box">
+		<p>
+			1. 从桌面模式切换到终端模式<br>
+  按CTRL+ALT+T<br>
+2. 切换到超级用户执行权限<br>
+sudo -i<br>
+如果有密码，输入密码。执行该命令后提示符变为“#”而不是“$”。<br>
+3. 查看当前路径命令<br>
+  pwd<br>
+4. 显示当前文件夹的内容<br>
+ls<br>
+5. 查看ip地址<br>
+ip a<br>
+6. 更改网络配置<br>
+ip地址:   172.16.18.2**(其中**为自己的两位学号）<br>
+netmask子网掩码:   255.255.255.0<br>
+gate way网关:      172.16.18.254<br>
+DNS（域名服务）：  220.189.127.107<br>
+重置网卡后，更改网络连接为：由原来的NAT模式为桥接模式，此时出现hotspot login登录，输入校园网登录帐号和密码，linux系统internet已连通<br>
+7. 测试internet网络是否连接<br>
+   ping   baidu.com<br>
+
+		</p>
+	</div>
+</body>
+</html>

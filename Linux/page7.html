@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>安装jdk1.8.0</title>
+	<link rel="stylesheet" href="style/css1.css">
+</head>
+<body>
+	<div class="box">
+		<p>
+			1.	将下载的 jdk-8u381-linux-x64.tar.gz通过远程连接工具, 放入/opt/目录, 然后解压<br>
+tar -zxvf  jdk-8u381-linux-x64.tar.gz -C /opt/<br>
+2.	在opt文件夹中，将文件夹jdk1.8.0_2501改名为jdk.<br>
+mv   jdk-8u381-linux-x64   jdk<br>
+3.	配置环境变量<br>
+gedit  /etc/profile<br>
+ 添加以下几行<br>
+export JAVA_HOME=/opt/jdk<br>
+export PATH=$JAVA_HOME/bin:$PATH<br>
+export CLASSHOME=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar<br>
+使环境变量生效<br>
+source  /etc/profile<br>
+5、检查java版本<br>
+java -version<br>
+<br>
+		</p>
+	</div>
+</body>
+</html>

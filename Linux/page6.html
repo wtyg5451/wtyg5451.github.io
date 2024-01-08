@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>在Linux中搭建第一个区块链网络</title>
+	<link rel="stylesheet" href="style/css1.css">
+</head>
+<body>
+	<div class="box">
+		<p>
+			1.	用winscp上传 fisco-bcos文件和buildchain.sh文件到指定的fisco文件夹<br>
+2.	在fisco目录下执行以下指令，生成一条单群组4节点的FISCO链<br>
+bash build_chain.sh -l 127.0.0.1:4 -p 30300,20200,8545 -e ./fisco-bcos -v 2.8.0.. <br>
+3.启动所有节点<br>
+bash nodes/127.0.0.1/start_all.sh<br>
+3.	检查进程是否启动<br>
+ps -ef | grep -v grep | grep fisco-bcos <br>
+4.	查看节点node0至node3链接的节点之间是否连接<br>
+tail -f nodes/127.0.0.1/node0/log/log*  | grep connected<br>
+tail -f nodes/127.0.0.1/node1/log/log*  | grep connected<br>
+tail -f nodes/127.0.0.1/node2/log/log*  | grep connected<br>
+tail -f nodes/127.0.0.1/node3/log/log*  | grep connected<br>
+
+		</p>
+	</div>
+</body>
+</html>

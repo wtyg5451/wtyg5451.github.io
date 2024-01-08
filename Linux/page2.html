@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>WeBASE安装</title>
+	<link rel="stylesheet" href="style/css1.css">
+</head>
+<body>
+	<div class="box">
+		<p>
+			WeBASE安装<br>
+#mysql中不用自己创建表，fiscobcos也不用提前装<br>
+#一键脚本，会自己安装fisco bcos<br>
+#不要使用root权限去安装，所有需要用到root权限的地方都加了sudo<br>
+<br>
+1、系统环境搭建<br>
+采用ubuntu20.04<br>
+sudo apt-get update<br>
+sudo apt install -y openssl curl<br>
+sudo apt-get install software-properties-common<br>
+<br>
+2、JAVA环境配置<br>
+sudo apt install -y default-jdk<br>
+#添加java_home<br>
+sudo gedit /etc/profile<br>
+#添加以下变量<br>
+export JAVA_HOME=/usr/lib/jvm/default-java<br>
+export PATH=$JAVA_HOME/bin:$PATH<br>
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar<br>
+#保存后命令行执行，引入最新的变量<br>
+source /etc/profile<br>
+<br>
+3、mysql<br>
+sudo apt install mysql-server-8.0 <br>
+sudo apt install mysql-client-8.0 <br>
+<br>
+4、查找mysql用户名和密码，后面的配置文件中用的到<br>
+sudo cat /etc/mysql/debian.cnf<br>
+<br>
+5、python3环境<br>
+sudo apt-get install -y python3-pip<br>
+sudo pip3 install PyMySQL<br>
+<br>
+6、执行一键安装webase<br>
+wget https://osp-1257653870.cos.ap-guangzhou.myqcloud.com/WeBASE/releases/download/v1.5.3/webase-deploy.zip<br>
+unzip webase-deploy.zip<br>
+cd webase-deploy<br>
+<br>
+7、修改webase基础配置<br>
+gedit common.properties <br>
+#参看 https://webasedoc.readthedocs.io/zh_CN/latest/docs/WeBASE/install.html#id7<br>
+#注释掉 【 使用Docker启用Mysql服务，则需要配置以下值】中的设置<br>
+#配置mysql的用户名和密码<br>
+#fisco.dir的实际路径<br>
+<br>
+8、开始安装<br>
+python3 deploy.py installAll<br>
+9、填坑jdbc，修改webase目录下的webase-node-mgr/conf/application.yml<br>
+#大概23行，jdbc字符串，最后面加&useSSL=false<br>
+<br>
+
+
+10、启动和停止的指令<br>
+#参看 https://webasedoc.readthedocs.io/zh_CN/latest/docs/WeBASE/install.html#id8<br>
+<br>
+11、访问路径为<br>
+http://127.0.0.1:5000<br>
+默认账号和密码为admin和Abcd1234<br>
+<br>
+
+		</p>
+	</div>
+</body>
+</html>
