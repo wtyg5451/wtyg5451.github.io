@@ -1,121 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>WtyG7584</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <style>
-        * {
-			padding: 0;
-			margin: 0;
-        }
-		body {
-			background-color: rgb(0, 0, 0);
-			padding-top: 64px;
-		}
-		#big_box {
-			width: 1920px;
-			height: 1080px;
-			margin-left: auto;
-			margin-right: auto;
-		}
-		#background {
-			width: 1920px;
-			height: 1080px;
-			position: relative;
-			border-radius: 25px;
-			overflow: hidden;
-		}
-		#background:hover>#enter_box {
-			opacity: 1;
-		}
-		#enter_box {
-			position: absolute;
-			height: 1080px;
-			width: 1920px;
-			background: rgba(255, 255, 255, 0.5);
-			backdrop-filter: blur(10px);
-			top: 0px;
-			border-radius: 25px;
-			transition: all 0.3s linear;
-			opacity: 0;
-		}
-		#enter_box>img {
-			width: 200px;
-			height: 200px;
-			position: relative;
-			border-radius: 100px;
-			left: 860px;
-			top: 100px;
-		}
-		a>.text {
-			width: 100px;
-			line-height: center;
-			position: relative;
-			color: rgb(0, 0, 0);
-			top: 10px;
-			left: 910px;
-			font-size: 20px;
-			align-items: center;
-		}
-		#title {
-			position: relative;
-			background: linear-gradient(rgba(255,255,255,0),rgba(0,0,0,1));
-			height: 200px;
-			width: 100%;
-			top: 980px;
-			transition: all 0.5s linear;
-		}
-		#enter_box:hover>#title {
-			top: 780px;
-		}
-		a {
-		    text-decoration: none;
-		}
-		a:link {
-			color: #333;
-			/* 未访问 */
-		} 
-		a:visited {
-			color: #333;
-			/* 已访问 */
-		}
-		a:hover {
-			color: #333;
-			/* 鼠标悬停 */
-		}
-		a:active {
-			color: #333;
-			/* 点击中 */
-		}
-    </style>
-	<!-- <script>
-		function showElement() {
-  		document.getElementById("enter_box").style.display = "block";
-		}
-
-		function hideElement() {
-  		document.getElementById("enter_box").style.display = "none";
-		}
-	</script> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Snake Game</title>
+	<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-	<div id="big_box">
-		<div id="background">
-			<video playsinline autoplay muted loop src="images/video.webm">
-			</video>
-				<div id="enter_box">
-					<img src="images/wtyglogo.jpg" alt="">
-					<div id="title">
-						<a href="page0.html"><div class="text"><p>点击进入</p></div></a>
-					</div>	
-				</div>
-		</div>
-		
-	</div>	
+	<div id="game-container">
+		<canvas id="gc" class="game-canvas" width="400" height="400"></canvas>
+	</div>
+	<div class="keys">
+	  <a class="up arr" onclick="Snake.action('up')">
+	    <i class="chevron up"></i></a>
+	  <br />
+	  <a class="left arr" onclick="Snake.action('left')">
+	    <i class="chevron left"></i></a>
+	  <a class="down arr" onclick="Snake.action('down')">
+	    <i class="chevron down"></i></a>
+	  <a class="right arr" onclick="Snake.action('right')">
+	    <i class="chevron right"></i></a>
+	</div>
+	<script type="text/javascript" src="game.js"></script>
+	<div id="box">
+	<a href="../page0.html">
+	<div id="backKey">
+	    <p>返回菜单</p>
+	</div>
+	</a>
+	</div>
 </body>
-
 </html>
