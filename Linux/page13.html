@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>密码学基础（二）</title>
+	<link rel="stylesheet" href="style/css1.css">
+</head>
+<body>
+	<div class="box">
+		<p>
+			任务三：非对称性加密<br>
+（1）生成一个rsa 非对称加密算法的私钥secretkey.pem。<br>
+openssl genrsa -out secretkey.pem 1024<br>
+（2）根据私钥推导公钥publickey.pem。<br>
+openssl rsa -in secretkey.pem -pubout -out publickey.pem<br>
+（3）使用刚刚推导的公钥对text.txt 进行加密，输出文件为text.txt.gpg。<br>
+openssl rsautl -encrypt -in text.txt -inkey publickey.pem -pubin -out text.txt.gpg<br>
+(4)利用私钥进行解密。<br>
+openssl rsautl -decrypt -in text.txt.gpg -inkey secretkey.pem<br>
+
+		</p>
+	</div>
+</body>
+</html>

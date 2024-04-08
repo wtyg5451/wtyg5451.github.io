@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Postman实例</title>
+	<link rel="stylesheet" href="style/css1.css">
+</head>
+<body>
+	<div class="box">
+		<p>
+			1.	启动Postman<br>
+2.	新建Collections，再新建一个Request，request方法为POST，host地址为以前搭建好并启动的区块链rpc地址127.0.0.1:8545<br>
+3.	传输数据，选择Body，raw、JSON，在内容中输入 {"jsonrpc":"2.0","method":"getClientVersion","params":[],"id":1}<br>
+4.	点击Send，验证Postman能正常获取到FISCO BCOS信息<br>
+5.	其它实例，请参照fisco bcos官方文档，搜索JSON-RPC API<br>
+
+		</p>
+	</div>
+</body>
+</html>

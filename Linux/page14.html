@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>密码学基础（三）</title>
+	<link rel="stylesheet" href="style/css1.css">
+</head>
+<body>
+	<div class="box">
+		<p>
+			任务四：数字签名<br>
+(1)生成签名私钥secretkey-sig.pem。<br>
+openssl ecparam -name secp256k1 -genkey -out secretkey-sig.pem<br>
+(2)导出验签公钥publickey-vrf.pem。<br>
+openssl pkey -pubout -in secretkey-sig.pem -out publickey-vrf.pem<br>
+(3) 用私钥对数据text.txt 进行签名,输出文件为text.sig。<br>
+openssl dgst -sha256 -sign secretkey-sig.pem -out text.sig text.txt<br>
+（4）用公钥验证签名。<br>
+openssl dgst -sha256 -verify publickey-vrf.pem -signature text.sig text.txt<br>
+
+		</p>
+	</div>
+</body>
+</html>

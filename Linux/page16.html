@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>在Linux中安装Postman环境(在线安装和离线安装）</title>
+	<link rel="stylesheet" href="style/css1.css">
+</head>
+<body>
+	<div class="box">
+		<p>
+			1.	在线安装<br>
+（1）Snap安装方法： <br>
+在终端运行以下命令：<br>
+snap install postman<br>
+（2）通过Ubuntu软件中心安装<br>
+打开Ubuntu软件中心，搜索postman ，然后点击“安装”<br>
+二、离线安装<br>
+1.将postman.tar.gz文件，通过winscp, 放入Downloads文件夹<br>
+2.	复制到root根目录<br>
+3.	修改postman.tar.gz文件权限<br>
+4.	两次解压并更名<br>
+tar xvf postman.tar.gz -C /opt/<br>
+5.设置软链接<br>
+ln -s /opt/Postman/postman  /usr/local/bin<br>
+6.运行postman<br>
+
+		</p>
+	</div>
+</body>
+</html>

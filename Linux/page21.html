@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>用truffle工具创建测试项目，修改编译器的版本为0.4.25，对HelloWorld合约进行测试</title>
+	<link rel="stylesheet" href="style/css1.css">
+</head>
+<body>
+	<div class="box">
+		<p>
+			1. 创建Helloworld-solidity目录，并初始化<br>
+Mkdir Helloworld-solidity<br>
+truffle init<br>
+2. 修改truffle-config.js配置<br>
+配置连接：<br>
+ <img src="./images/page21_1.png"><br>
+修改solc版本：<br>
+ <img src="./images/page21_2.png"><br>
+3.添加部署代码<br>
+添加部署代码migrations/1_deploy_helloworld.js：<br>
+let helloworld = artifacts.require("HelloWorld");<br>
+module.exports = function(deployer) {<br>
+    deployer.deploy(helloworld);<br>
+}<br>
+4.部署合约上链：<br>
+   truffle migrate<br>
+5.验证区块高度发生变化并有相应合约地址<br>
+
+		</p>
+	</div>
+</body>
+</html>

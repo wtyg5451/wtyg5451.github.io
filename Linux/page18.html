@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>在Linux中安装最新的nodejs,安装truffle环境</title>
+	<link rel="stylesheet" href="style/css1.css">
+</head>
+<body>
+	<div class="box">
+		<p>
+			1.	将node-v20.11.1-linux-x64.tar.xz文件，通过远程连接工具, 放入Downloads文件夹<br>
+2.	复制到root根目录<br>
+3.	修改node-v20.11.1-linux-x64.tar.xz文件权限<br>
+4.	两次解压并更名<br>
+tar xvf node-v20.11.1-linux-x64.tar.xz -C /opt/<br>
+mv node-v20.11.1-linux-x64.tar.xz  nodejs<br>
+5.设置软链接<br>
+ln -s nodejs/bin/npm  /usr/local/bin<br>
+ln -s nodejs/bin/node  /usr/local/bin<br>
+ln -s nodejs/bin/npx  /usr/local/bin<br>
+6.查看版本号<br>
+node --version<br>
+npm --version<br>
+7.	安装truffle<br>
+npm install truffle<br>
+
+		</p>
+	</div>
+</body>
+</html>

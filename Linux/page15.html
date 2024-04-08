@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>密码学基础（四）</title>
+	<link rel="stylesheet" href="style/css1.css">
+</head>
+<body>
+	<div class="box">
+		<p>
+			（1）生成根证书ca.crt。<br>
+openssl genrsa -out ca.key 2048<br>
+openssl req -new -x509 -days 365 -subj "/CN=CN/O=root/OU=root" -key ca.key -out ca.crt<br>
+（2）生成用户证书user.crt。<br>
+openssl genrsa -out user.key 2048<br>
+openssl req -new -sha256 -subj "/CN=CN/O=user/OU=user" -key user.key -out user.csr<br>
+openssl x509 -req -days 365 -sha256 -CA ca.crt -CAkey ca.key -CAcreateserial -in user.csr -out user.crt<br>
+（3）验证用户证书。<br>
+openssl verify -CAfile ca.crt user.crt<br>
+
+
+		</p>
+	</div>
+</body>
+</html>

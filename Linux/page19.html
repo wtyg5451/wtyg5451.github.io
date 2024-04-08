@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>编写一个简介的智能合约HelloWorld.sol</title>
+	<link rel="stylesheet" href="style/css1.css">
+</head>
+<body>
+	<div class="box">
+		<p>
+			1. 智能合约IDE环境<br>
+2.	Webase-front前置程序<br>
+3.	linux环境下Visual Studio Code安装solidity Extensions<br>
+4.	编写HelloWorld.sol<br>
+pragma solidity>=0.4.24 <0.6.11;<br>
+	contract HelloWorld {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;string name;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;constructor() public {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name = "Hello, World!";<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;function get() public view returns (string memory) {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return name;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;function set(string memory n) public {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name = n;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+	}<br>
+<br>
+		</p>
+	</div>
+</body>
+</html>

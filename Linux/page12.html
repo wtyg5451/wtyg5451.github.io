@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>密码学基础（一）</title>
+	<link rel="stylesheet" href="style/css1.css">
+</head>
+<body>
+	<div class="box">
+		<p>
+			任务一、准备一个文本文件，写入内容："hello world"，使用sha256 算法计算文本的哈希值。
+echo "hello world">text.txt<br>
+openssl sha256 text.txt<br>
+任务二：对称加密算法<br>
+（1）设置口令为123456，并保存在password.txt 文件中。<br>
+echo "123456" > password.txt<br>
+（2）使用aes 算法加密，首先加密text.txt 文件，再将加密后的内容保存在text.out 文件中。<br>
+openssl enc -aes-128-cbc -in text.txt -out text.out -kfile password.txt<br>
+（3）将刚刚加密的文件进行解密。<br>
+openssl enc -aes-128-cbc -d -in text.out -kfile password.txt<br>
+
+
+		</p>
+	</div>
+</body>
+</html>
