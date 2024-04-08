@@ -92,10 +92,18 @@ a:active {
 	width: 240px;
 	height: 40px;
 	border-radius: 6px;
-	background-color: rgb(12, 12, 12);
+	background-color: rgb(31, 31, 31);
 	margin-top: 15px;
 	box-shadow: inset -2px -2px 2px rgb(30, 30, 30);
 	transition: all 0.2s linear;
+}
+#left_box .point .bsf {
+	color: rgb(255, 255, 255);
+	float: right;
+	transition: all 0.5s;
+}
+#left_box  .point:hover .bsf {
+	color: rgb(0, 231, 0);
 }
 #left_box p {
 	display: block;
