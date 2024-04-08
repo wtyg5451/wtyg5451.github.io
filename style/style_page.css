@@ -97,12 +97,12 @@ a:active {
 	box-shadow: inset -2px -2px 2px rgb(30, 30, 30);
 	transition: all 0.2s linear;
 }
-#left_box .point .bsf {
+#left_box .point .bsf1 {
 	color: rgb(255, 255, 255);
 	float: right;
 	transition: all 0.5s;
 }
-#left_box  .point:hover .bsf {
+#left_box  .point:hover .bsf1 {
 	color: rgb(0, 231, 0);
 }
 #left_box p {
