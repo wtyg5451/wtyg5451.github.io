@@ -4,6 +4,7 @@
 }
 body {
 	background-color: rgb(24, 24, 24);
+	margin-bottom: 80px;
 }
 .box{
 	width: 1000px;

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>在python环境flask框架中搭建一个基于区块链底层技术的食品溯源应用系统</title>
+	<link rel="stylesheet" href="style/css1.css">
+</head>
+<body>
+	<div class="box">
+		<p>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;某公司规划开发一个“食品溯源”应用系统，通过区块链技术，实现食品生产、流通、销售等环节的溯源。以蔬菜食品为例，假设蔬菜食品在流转过程中的角色包含农场、中间商、超市、消费者4种，我们期望利用区块链的存证防伪技术，建立与4种角色相关的蔬菜食品溯源应用平台，最终消费者在购买到该蔬菜食品时，通过输入蔬菜食品的溯源码，能够查看到该蔬菜食品的基本信息及其完整流转过程。<br>
+			<br>
+			<br>
+			1.	登陆linux服务器，检查部署的4节点fisco进程是否有启动，如果未启动，执行命令启动，再次检查。<br>
+			2.	登陆linux服务器，检查WeBASE-Front进程是否有启动，如果未启动，执行命令启动，再次检查。<br>
+			3.	查看WeBASE-Front服务默认的5002端口是否正常启动。<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;说明：服务启动过程预计需要1分钟，请等待服务完全启动后，再执行下面步骤。<br>
+			4.	在PC端chrome浏览器上访问WeBASE-Front，访问地址格式为http://ip:port/WeBASE-Front。<br>
+			5.	基于WeBASE-Front平台，创建一个超级用户，用户名称为admin。<br>
+			6.	在WeBASE-Front，合约管理->合约IDE中新建目录trace，并将指定文件夹下trace路径下的智能合约代码全部导入到WeBASE-Front IDE中新建的trace目录中。<br>
+			7.	在合约管理->测试用户中，创建三个测试用户，分别对应三个角色，命名为producer，distributor，retailer，供部署合约使用，请将创建好的账号地址复制到一个名为user.txt中待用。<br>
+			8.	完成Trace合约的保存，编译，部署。<br>
+			
+			9.	编辑app.py<br>
+   			根据自己部署情况替换以下项：<br>
+			URL = 'http://IP:5002/WeBASE-Front/trans/handle'<br>
+			### 填写智能合约的相关信息<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;CONTRACT_NAME = 'Trace'<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;CONTRACT_ADDRESS = '*****'<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;CONTRACT_ABI = '****'<br>
+			### 填写用户地址信息<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;PRODUCER_ADDRESS = '****'<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;DISTRIBUTOR_ADDRESS = '****'<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;RETAILER_ADDRESS = '****'<br>
+			10.	启动应用<br>
+			注意在app.py对应的文件夹下启动<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;export FLASK_APP=app<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;\flask run --port 5001 --host=0.0.0.0<br>
+			<br>
+			<img src="./images/page22_2.png" alt="" width="1000px"><br>
+			<br>
+			运行结果如下：<br>
+			<br>
+			<img src="./images/page22_1.png" alt="" width="1000px"><br>
+			<br>
+
+		</p>
+	</div>
+</body>
+</html>
