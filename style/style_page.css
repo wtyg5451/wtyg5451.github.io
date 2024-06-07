@@ -85,7 +85,7 @@ a:active {
 	opacity: 1;
 }
 #left_box  .button:hover {
-	background-color: #111;
+	background-color: rgb(31, 31, 31);
 }
 #left_box  .point {
 	color: white;
