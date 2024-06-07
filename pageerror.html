@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>ERROR</title>
 	<style>
 		* {
 			margin: 0;
@@ -12,42 +12,90 @@
 			box-sizing: border-box;
 		}
 		body {
-			background-color: #444;
+			background-color: #000000;
+		}
+		#style {
+			width: 100%;
+			height: auto;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 50px;
 		}
 		.text {
-			width: 240px;
-			font-size: 60px;
-			color: #d80808;
-			text-align: center;
-			font-weight: bold;
-			background-color: rgba(251, 194, 32, 1);
-			margin: 0 auto;
+			width: 50%;
+			height: auto;
+			margin-left: auto;
+			margin-right: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: white;
 		}
-		img {
-			width: 480px;
-			height: 480px;
-			margin: 0 auto;
-			margin-top: 20px;
-			display: block;
+		.text p {
+			font-size: 3vw;
+		}
+		span {
+			color: red;
+		}
+		.box {
+			width: 100%;
+			height: auto;
+			margin-left: auto;
+			margin-right: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.box img {
+			width: 20%;
+			height: auto;
 		}
 		.back {
-        	width: 180px;
-       		height: 40px;
-        	text-align: center;
-        	line-height: 40px;
-        	display: block;
-        	background-color: #999;
-			margin: 0 auto;
-    	}
+			width: 100%;
+			height: auto;
+			margin-left: auto;
+			margin-right: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.back p {
+			font-size: 1.5vw;
+		}
+		a:link {
+			color: #ffffff;
+			/* 未访问 */
+		} 
+		a:visited {
+			color: #ffffff;
+			/* 已访问 */
+		}
+		a:hover {
+			color: #ffffff;
+			/* 鼠标悬停 */
+		}
+		a:active {
+			color: #ffffff;
+			/* 点击中 */
+		}
 	</style>
 </head>
 <body>
-	<p class="text">ERROR!</p>
-	<img src="images/peter.jpg" alt="">
-	<p class="back">
-		<a href="index.html">
-			返回到Welcome Page
-		</a>
-	</p>
+	<div id="style">
+		<div class="text">
+			<p>An <span>ERROR</span> has occurred</p>
+		</div>
+		<div class="text">
+			<p>But</p>
+		</div>
+		<div class="box">
+			<img src="./images/fuck2.jpg" alt="">
+		</div>
+		<div class="back">
+			<a href="./page0.html">
+				<p>Go to MENU</p>
+			</a>
+		</div>
+	</div>
 </body>
 </html>
